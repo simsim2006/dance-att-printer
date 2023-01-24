@@ -30,7 +30,7 @@ def on_connect(mosq, obj, rc, e):
     print("Connected")
     Epson.text(os.environ.get("PRINTER_ID") + " ready")
     Epson.cut()
-    mqttc.subscribe(MQTT_TOPIC, 0)
+    mqttc.subscribe(MQTT_TOPIC, 1)
 
 # Define on_message event function. 
 # This function will be invoked every time,
